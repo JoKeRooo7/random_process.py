@@ -13,7 +13,7 @@ def plot_normal_distribution(data, columns, title):
         mean = data[column].mean()
         std = data[column].std()
         std_err = std / np.sqrt(len(data[column]))  # Стандартная ошибка
-        x = np.linspace(mean - 3 * std, mean + 3*std, 100)  # Задаем диапазон значений по оси x
+        x = np.linspace(mean - 3 * std, mean + 3*std, 50)  # Задаем диапазон значений по оси x
         ax.plot(x, norm.pdf(x, mean, std), 'r-', lw=2)  # Строим график нормального распределения
         ax.set_title(column)
     
@@ -38,7 +38,7 @@ def plot_frequency_distribution(data, title):
 
 
 if __name__ == "__main__":
-    data = pd.read_csv("../../datasets/unstable_equilibrium_data_2.csv")
-    # plot_normal_distribution(data, data.columns[:3], "Нормальное распределение для 8, 16 и 64")
-    # plot_normal_distribution(data, data.columns[3:], "Нормальное распределение для 400, 800 и 3600")
-    plot_frequency_distribution(data, 'Распределение частоты встречаемости значений')
+    data = pd.read_csv("../../../datasets/unstable_equilibrium_data_2.csv")
+    plot_normal_distribution(data, data.columns[:3], "Нормальное распределение для 8, 16 и 64")
+    plot_normal_distribution(data, data.columns[3:], "Нормальное распределение для 400, 800 и 3600")
+    # plot_frequency_distribution(data, 'Распределение частоты встречаемости значений')

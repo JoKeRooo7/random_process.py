@@ -17,7 +17,10 @@ class Box:
     
     def step(self):
         i = int(random.random() * self.n)
-        if self.x[i] < 0.5:
+        # r = random.uniform(0, 1)
+        r = random.random()
+        p = self.n_left / self.n
+        if r < p:
             self.n_left -= 1
             self.x[i] = 0.5 * (1 + random.random())
             self.y[i] = random.random()
@@ -75,9 +78,9 @@ class BoxApp:
         if size < stop_after_corresponding:
             return False
 
-        min_value = self.box.n_left - 1
-        max_value = self.box.n_left + 1
-        for i in range(size - stop_after_corresponding, size - 1):
+        min_value = self.box.n_left - stop_after_corresponding
+        max_value = self.box.n_left + stop_after_corresponding
+        for i in range(size - stop_after_corresponding, size):
             if (self.history_left_particles[i] < min_value or 
                 self.history_left_particles[i] > max_value):
                 return False
@@ -115,7 +118,7 @@ def create_box(size, stop_after_corresponding=3, visual=False):
 
 
 def main():
-    my_box_8 = create_box(8, 15)
+    my_box_8 = create_box(8)
     # my_box_16 = create_box(16)
     # my_box_64 = create_box(64)
     # my_box_400 = create_box(400)
