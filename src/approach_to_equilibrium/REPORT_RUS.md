@@ -72,7 +72,8 @@ $$ \sigma = \sqrt {\frac{{\sum_{i=1}^{n}(x_i-\bar{x})}}{{n}}} $$
 
 $$ d = \frac{\sigma}{\sqrt{n}} $$
 
-* для оценки доверительного интервала использовался метод [`bootstrap`](https://habr.com/ru/companies/X5Tech/articles/679842/) (данные распределены не нормально)
+* для оценки доверительного интервала использовался метод [`bootstrap`](https://habr.com/ru/companies/X5Tech/articles/679842/).
+Данные у меня не соотвествуют номральному распределиню по тесту [Шапиро-Уилка](https://tvims.nsu.ru/arkashov/calc/Stat/Shapiro/Shapiro.html)
 
 Для данных 1000 экспериментов (bootstrap с 1000 итерациями)
 
