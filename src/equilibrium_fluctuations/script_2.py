@@ -1,3 +1,4 @@
+import time
 import random
 import matplotlib.pyplot as plt
 
@@ -78,9 +79,9 @@ class BoxApp:
         if size < stop_after_corresponding:
             return False
 
-        min_value = self.box.n_left - stop_after_corresponding
-        max_value = self.box.n_left + stop_after_corresponding
-        for i in range(size - stop_after_corresponding, size):
+        min_value = self.box.n_left - 1
+        max_value = self.box.n_left + 1
+        for i in range(size - stop_after_corresponding, size - 1):
             if (self.history_left_particles[i] < min_value or 
                 self.history_left_particles[i] > max_value):
                 return False
@@ -98,6 +99,8 @@ class BoxApp:
         if stop_after_corresponding < 1 or step < 1:
             raise "bad arguments"
         
+        start_time = time.time()
+
         for _ in range(step):
             self.do_step()
             if visual:
@@ -105,6 +108,9 @@ class BoxApp:
 
             if self.__check_equilibrium(stop_after_corresponding):
                 break
+
+        end_time = time.rime()
+        self.time = start_time - end_time
 
         plt.close()
             
@@ -118,21 +124,21 @@ def create_box(size, stop_after_corresponding=3, visual=False):
 
 
 def main():
-    my_box_8 = create_box(8)
-    # my_box_16 = create_box(16)
-    # my_box_64 = create_box(64)
+    my_box_8 = create_box(400, 1)
+    my_box_16 = create_box(800, 1)
+    my_box_64 = create_box(3600, 1)
     # my_box_400 = create_box(400)
     # my_box_800 = create_box(800)
     # my_box_3600 = create_box(3600)
 
-    plt.plot(range(1, len(my_box_8.history_left_particles) + 1), my_box_8.history_left_particles, label='8 particles')
-    # plt.plot(range(1, len(my_box_16.history_left_particles) + 1), my_box_16.history_left_particles, label='800 particles')
-    # plt.plot(range(1, len(my_box_64.history_left_particles) + 1), my_box_64.history_left_particles, label='3600 particles')
+    plt.plot(range(1, len(my_box_8.history_left_particles) + 1), my_box_8.history_left_particles, label='400 particles')
+    plt.plot(range(1, len(my_box_16.history_left_particles) + 1), my_box_16.history_left_particles, label='800 particles')
+    plt.plot(range(1, len(my_box_64.history_left_particles) + 1), my_box_64.history_left_particles, label='3600 particles')
     plt.xlabel('step - Количество шагов')
     plt.ylabel('n - количество частиц слева')
     plt.title('Эволюция частиц')
     plt.legend()
-    print(len(my_box_8.history_left_particles))
+    # print(len(my_box_8.history_left_particles))
     # print(len(my_box_8.history_left_particles),
     #       len(my_box_16.history_left_particles),
     #       len(my_box_64.history_left_particles))

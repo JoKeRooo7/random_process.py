@@ -91,7 +91,7 @@ class BoxApp:
         else:
             return self.__check_stable_equilibrium(stop_after_corresponding)
 
-    def main(self, stop_after_corresponding=3,step=10000000, visual=False):
+    def main(self, stop_after_corresponding=3,step=1000000, visual=False):
         if stop_after_corresponding < 1 or step < 1:
             raise "bad arguments"
         
@@ -115,7 +115,7 @@ def create_box(size, stop_after_corresponding=3, visual=False):
 
 
 def main():
-    my_box_8 = create_box(8, 15)
+    my_box_8 = create_box(400, 3)
     # my_box_16 = create_box(16)
     # my_box_64 = create_box(64)
     # my_box_400 = create_box(400)

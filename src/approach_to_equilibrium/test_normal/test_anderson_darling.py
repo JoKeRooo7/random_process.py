@@ -1,7 +1,7 @@
 import pandas as pd
 from scipy.stats import anderson
 
-data = pd.read_csv('../../../datasets/unstable_equilibrium_data_1.csv')
+data = pd.read_csv('../../../datasets/update_stable_equilibrium_data_1.csv')
 
 # Проверка нормальности данных для каждой колонки
 for column in data.columns:
