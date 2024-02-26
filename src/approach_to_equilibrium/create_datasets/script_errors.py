@@ -50,7 +50,6 @@ def start_experiment(create_box_func, stepwriter, timewriter, num_experiments, s
 
 
 
-
 def calculate_bootstrap_error(data, statistic, iterations=1000, confidence_level=0.95):
     boot_statistics = np.zeros(iterations)
     for i in range(iterations):

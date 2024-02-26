@@ -24,30 +24,25 @@ def create_histogram(file_name, output):
 
 
 if __name__ == "__main__":
-    create_histogram("../../../datasets/approach_to_equilibrium/UN-script_1_data_1000_1.csv",
-                     "../../../image/approach_to_equilibrium/HIST-UN-script_1_data_1000_1.png")
-    create_histogram("../../../datasets/approach_to_equilibrium/UN-script_1_data_100000_1.csv",
-                     "../../../image/approach_to_equilibrium/HIST-UN-script_1_data_100000_1.png")
-    create_histogram("../../../datasets/approach_to_equilibrium/UN-script_2_data_1000_1.csv",
-                     "../../../image/approach_to_equilibrium/HIST-UN-script_1_data_1000_1.png")
-    create_histogram("../../../datasets/approach_to_equilibrium/UN-script_2_data_100000_1.csv",
-                     "../../../image/approach_to_equilibrium/HIST-UN-script_1_data_100000_1.png")
+    FOLDER_DATASETS = "../../../datasets/approach_to_equilibrium/"
+    OUTPUT_FOLDER = "../../../images/approach_to_equilibrium/"
+    create_histogram(FOLDER_DATASETS + "UNST_STEP_script_1_1000_1.csv", OUTPUT_FOLDER + "UNST_STEP_script_1_1000_1.png")
+    create_histogram(FOLDER_DATASETS + "UNST_STEP_script_1_10000_1.csv", OUTPUT_FOLDER + "UNST_STEP_script_1_10000_1.png")
+    create_histogram(FOLDER_DATASETS + "UNST_STEP_script_1_100000_1.csv", OUTPUT_FOLDER + "UNST_STEP_script_1_100000_1.png")
+    create_histogram(FOLDER_DATASETS + "UNST_STEP_script_2_1000_1.csv", OUTPUT_FOLDER + "UNST_STEP_script_2_1000_1.png")
+    create_histogram(FOLDER_DATASETS + "UNST_STEP_script_2_10000_1.csv", OUTPUT_FOLDER + "UNST_STEP_script_2_10000_1.png")
+    create_histogram(FOLDER_DATASETS + "UNST_STEP_script_2_100000_1.csv", OUTPUT_FOLDER + "UNST_STEP_script_2_100000_1.png")
     
-    create_histogram("../../../datasets/approach_to_equilibrium/ST-script_1_data_1000_10.csv",
-                     "../../../image/approach_to_equilibrium/HIST-ST-script_1_data_1000_10.png")
-    create_histogram("../../../datasets/approach_to_equilibrium/ST-script_1_data_100000_10.csv",
-                     "../../../image/approach_to_equilibrium/HIST-ST-script_1_data_100000_10.png")
-    create_histogram("../../../datasets/approach_to_equilibrium/ST-script_2_data_1000_10.csv",
-                     "../../../image/approach_to_equilibrium/HIST-ST-script_1_data_1000_10.png")
-    create_histogram("../../../datasets/approach_to_equilibrium/ST-script_2_data_100000_10.csv",
-                     "../../../image/approach_to_equilibrium/HIST-ST-script_1_data_100000_10.png")
-    create_histogram("../../../datasets/approach_to_equilibrium/ST-script_1_data_1000_15.csv",
-                     "../../../image/approach_to_equilibrium/HIST-ST-script_1_data_1000_15.png")
-    create_histogram("../../../datasets/approach_to_equilibrium/ST-script_1_data_100000_15.csv",
-                     "../../../image/approach_to_equilibrium/HIST-ST-script_1_data_100000_15.png")
-    create_histogram("../../../datasets/approach_to_equilibrium/ST-script_2_data_1000_15.csv",
-                     "../../../image/approach_to_equilibrium/HIST-ST-script_1_data_1000_15.png")
-    create_histogram("../../../datasets/approach_to_equilibrium/ST-script_2_data_100000_15.csv",
-                     "../../../image/approach_to_equilibrium/HIST-ST-script_1_data_100000_15.png")
+    create_histogram(FOLDER_DATASETS + "ST_STEP_script_1_1000_10.csv", OUTPUT_FOLDER + "ST_STEP_script_1_1000_10.png")
+    create_histogram(FOLDER_DATASETS + "ST_STEP_script_1_10000_10.csv", OUTPUT_FOLDER + "ST_STEP_script_1_10000_10.png")
+    create_histogram(FOLDER_DATASETS + "ST_STEP_script_1_100000_10.csv", OUTPUT_FOLDER + "ST_STEP_script_1_100000_10.png")
+    create_histogram(FOLDER_DATASETS + "ST_STEP_script_2_1000_10.csv", OUTPUT_FOLDER + "ST_STEP_script_2_1000_10.png")
+    create_histogram(FOLDER_DATASETS + "ST_STEP_script_2_10000_10.csv", OUTPUT_FOLDER + "ST_STEP_script_2_10000_10.png")
+    create_histogram(FOLDER_DATASETS + "ST_STEP_script_2_100000_10.csv", OUTPUT_FOLDER + "ST_STEP_script_2_100000_10.png")
 
-
+    create_histogram(FOLDER_DATASETS + "ST_STEP_script_1_1000_15.csv", OUTPUT_FOLDER + "ST_STEP_script_1_1000_15.png")
+    create_histogram(FOLDER_DATASETS + "ST_STEP_script_1_10000_15.csv", OUTPUT_FOLDER + "ST_STEP_script_1_10000_15.png")
+    create_histogram(FOLDER_DATASETS + "ST_STEP_script_1_100000_15.csv", OUTPUT_FOLDER + "ST_STEP_script_1_100000_15.png")
+    create_histogram(FOLDER_DATASETS + "ST_STEP_script_2_1000_15.csv", OUTPUT_FOLDER + "ST_STEP_script_2_1000_15.png")
+    create_histogram(FOLDER_DATASETS + "ST_STEP_script_2_10000_15.csv", OUTPUT_FOLDER + "ST_STEP_script_2_10000_15.png")
+    create_histogram(FOLDER_DATASETS + "ST_STEP_script_2_100000_15.csv", OUTPUT_FOLDER + "ST_STEP_script_2_100000_15.png")

@@ -20,15 +20,15 @@ def calc_step_err(folder, step_file_input):
 
 def calculate_script_one_stable_eq_dataset(folder, num_experiments, stop_after_corresponding):
     step_file_input = f"ST_STEP_script_1_{num_experiments}_{stop_after_corresponding}.csv"
-    time_file_input = f"ST_script_1_{num_experiments}_{stop_after_corresponding}.csv"
+    time_file_input = f"ST_TIME_script_1_{num_experiments}_{stop_after_corresponding}.csv"
 
     create_dataset(create_box_one, folder + step_file_input, folder+time_file_input, num_experiments, stop_after_corresponding)
     calc_step_err(folder, step_file_input)
 
 
-def caclulate_script_two_sstable_eq_dataset(folder, num_experiments, stop_after_corresponding)
+def caclulate_script_two_stable_eq_dataset(folder, num_experiments, stop_after_corresponding):
     step_file_input = f"ST_STEP_script_2_{num_experiments}_{stop_after_corresponding}.csv"
-    time_file_input = f"ST_script_2_{num_experiments}_{stop_after_corresponding}.csv"
+    time_file_input = f"ST_TIME_script_2_{num_experiments}_{stop_after_corresponding}.csv"
 
     create_dataset(create_box_one, folder + step_file_input, folder+time_file_input, num_experiments, stop_after_corresponding)
     calc_step_err(folder, step_file_input)
@@ -41,10 +41,10 @@ if __name__ == "__main__":
     calculate_script_one_stable_eq_dataset(FOLDER, 10000, 15)
     calculate_script_one_stable_eq_dataset(FOLDER, 100000, 10)
     calculate_script_one_stable_eq_dataset(FOLDER, 100000, 15)
-    calculate_script_two_stable_eq_dataset(FOLDER, 1000, 10)
-    calculate_script_two_stable_eq_dataset(FOLDER, 1000, 15)
-    calculate_script_two_stable_eq_dataset(FOLDER, 10000, 10)
-    calculate_script_two_stable_eq_dataset(FOLDER, 10000, 15)
-    calculate_script_two_stable_eq_dataset(FOLDER, 100000, 10)
-    calculate_script_two_stable_eq_dataset(FOLDER, 100000, 15)
+    caclulate_script_two_stable_eq_dataset(FOLDER, 1000, 10)
+    caclulate_script_two_stable_eq_dataset(FOLDER, 1000, 15)
+    caclulate_script_two_stable_eq_dataset(FOLDER, 10000, 10)
+    caclulate_script_two_stable_eq_dataset(FOLDER, 10000, 15)
+    caclulate_script_two_stable_eq_dataset(FOLDER, 100000, 10)
+    caclulate_script_two_stable_eq_dataset(FOLDER, 100000, 15)
     
